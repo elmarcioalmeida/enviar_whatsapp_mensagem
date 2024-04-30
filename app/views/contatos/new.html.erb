@@ -1,0 +1,17 @@
+<h1>Enviar Mensagem</h1>
+
+<%= form_with(model: @contato, url: contatos_path, method: :post) do |form| %>
+  <%= form.label :nome %>
+  <%= form.text_field :nome %>
+
+  <%= form.label :telefone %>
+  <%= form.text_field :telefone %>
+
+  <%= form.label :mensagem %>
+  <%= form.text_area :mensagem %>
+
+  <%= form.submit "Criar Contato" %>
+<% end %>
+
+ 
+<%= link_to "Página inicial", contatos_path %>

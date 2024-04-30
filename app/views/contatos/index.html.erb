@@ -1,0 +1,25 @@
+<!-- app/views/contatos/index.html.erb -->
+<h1>Relatório de Contatos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Mensagem</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contatos.each do |contato| %>
+      <tr>
+        <td><%= contato.nome %></td>
+        <td><%= contato.telefone %></td>
+        <td><%= contato.mensagem %></td>
+        <td><%= link_to "Enviar mensagem WhatsApp", enviar_whatsapp_path(telefone: contato.telefone) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Voltar para o formulário de entrada", new_contato_path %>

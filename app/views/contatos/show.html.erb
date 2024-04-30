@@ -1,0 +1,16 @@
+<h1>Detalhes do Contato</h1>
+
+<dl>
+  <dt>Nome:</dt>
+  <dd><%= @contato.nome %></dd>
+
+  <dt>Telefone:</dt>
+  <dd><%= @contato.telefone %></dd>
+
+  <dt>Mensagem:</dt>
+  <dd><%= @contato.mensagem %></dd>
+</dl>
+
+
+<%= link_to "Voltar para o formulário de entrada", new_contato_path %>
+<%= link_to "Página inicial", contatos_path %>
